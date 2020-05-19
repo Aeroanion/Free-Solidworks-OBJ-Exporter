@@ -1,0 +1,31 @@
+NOTE: THIS IS THE SAME TEXT AS APPEARS IN THE MACRO UI 'ABOUT'.
+
+This macro is an extension of one made available to the public at
+http://sites.google.com/site/karpena/solidworks by karpena@gmail. 
+This software is free for use but is NOT be sold as is, nor in modified form, nor incorporated in
+other software for sale. Version 2.0 is by virtualdesignsnz@gmail and was  released 1/4/2012. It
+should work properly with SW2005 and up. No support is provided and it is distributed without any
+warranty. Be sure to have a backup of your data before using
+
+This macro will export meshes in.obj format from SolidWorks parts and assemblies along with
+materials details in a .mtl file. Display States, sketch pictures and decals are not considered
+and the components must be set to resolved. SW Appearances, previously known as Colours/Textures,
+(but not PW or PV360 materials) that are applied to faces, features, bodies, parts and components
+in the active configuration are considered. The macro wil traverse an assembly and subassys to
+get the correct config of all components. Use SW 'propogate visual properties' for patterns. In
+some cases SW materials may not export as expected and should be tuned in another application
+prior to rendering. If your model's configurations are complex or the tessellation is fine
+exporting could take some minutes.
+
+The SW materials have been interpreted to give useful output for Blender and Octane import.
+Octane glossy is assumed, but diffuse can be flagged in SW by zero spec. Octane specular is set
+from transparency > zero. Textures need to be actual mapped textures not Realview effects. Where
+textures are found the material is exported as white diffuse + Kd texture. Unless it is disabled
+the name of the texture is used in the .mtl and the images are copied to the output directory.
+If model items have the same material applied they will be included in the same mesh group so if
+access to a region is required later be sure to give that a different material.
+
+Set the tessellation options to suit the model. Finer settings give better fidelity but more
+faces. Smaller parts like screws need a small max chord deviation to capture sufficient detail.
+Try 1/10 min dia. When scale is applied it also compensates the tess settings so that the face
+fidelity is the same. See the README for more details... 
