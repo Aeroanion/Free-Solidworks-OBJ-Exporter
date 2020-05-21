@@ -2,7 +2,7 @@
 
 Free SolidWorks .OBJ Exporter v2.0 published 1/4/2012
 
-##DISCLAIMER:
+## DISCLAIMER:
 
 This software is free for use and to distribute. It is NOT to be sold as is, nor in modified
 form,nor incorporated in other software for sale.
