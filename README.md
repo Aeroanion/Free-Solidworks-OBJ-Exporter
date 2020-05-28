@@ -1,9 +1,9 @@
 # Free-Solidworks-OBJ-Exporter
-=================================================================================================
-Free SolidWorks .OBJ Exporter v2.0 published 1/4/2012
-=================================================================================================
 
-DISCLAIMER:
+Free SolidWorks .OBJ Exporter v2.0 published 1/4/2012
+
+
+## DISCLAIMER:
 
 This software is free for use and to distribute. It is NOT to be sold as is, nor in modified
 form,nor incorporated in other software for sale.
@@ -15,9 +15,8 @@ Use at your own risk.
 This macro has been tested with Win XP Pro 32 bit using SW2005 and SW2009 and with Blender 2.62
 and Octane beta 2.57 but not exhaustively.
  
--------------------------------------------------------------------------------------------------
-
-INTRODUCTION:
+ 
+## INTRODUCTION:
 
 The purpose of this macro is to export meshes in Alias|Wavefront .obj format from SolidWorks.
 The materials details are also exported as a standard Alias|Wavefront .mtl file.
@@ -28,11 +27,10 @@ current document. eg D:\surfboard.sldpart --> D:\surfboard OBJ\surfboard.obj
 When you export again from the same SolidWorks document any existing OBJ directory and the
 contained files will be overwritten without warning.
 The macro UI provides the user with an opportunity to set custom tessellation parameters and other
-useful options. The macro should work as intended with SolidWorks version 2005 and up.  
+useful options. The macro should work as intended with SolidWorks version 2005 and up.
 
--------------------------------------------------------------------------------------------------
 
-INSTALLATION:
+## INSTALLATION:
 
 The SW macro can go anywhere but conveniently where you keep your other SW macros. You will need
 to use the provided toolbar button to launch the macro from SW. See the SW Help>Macros>customise
@@ -56,11 +54,11 @@ The path to Octane is assumed to be C:\Program Files\Refractive Software\OctaneR
 You can change these paths if necessary in the vba module code by going to lines 627 & 632
 respectively.
 
--------------------------------------------------------------------------------------------------
 
-FURTHER USEAGE NOTES not covered in the 'About':
+## FURTHER USEAGE NOTES not covered in the 'About':
 
-CONFIGURATIONS:
+### CONFIGURATIONS:
+
 The macro should correctly traverse complex configuations and all forms of patterns correctly
 including exploded views. Assembly Features like holes and cuts are only considered if they are
 propogated to the parts.
@@ -74,7 +72,9 @@ After running the macro you should NOT accept the SW prompt to save your models 
 document because they have changed. There is no change. It is only flagged so because of the
 harmless rebuild. This also minimises the risk of some unintended change occuring by accident.
 
-COMPLEX PARTS AND ASSEMBLIES:
+
+### COMPLEX PARTS AND ASSEMBLIES:
+
 The tessellation from complex parts and assemblies is liable to take several minutes to complete
 particularly those with numerous configurations to traverse. The files can also be quite large.
 Be wary of tackling too much at once and creating a .obj that is too big to handle in other
@@ -91,7 +91,9 @@ some of the pictures is about 450,000 tris and the .obj is 87mb, so 11 of these 
 The number of tris produced isnt so much to do with the size or number of objects as the need to
 capture fine details with sufficient tessellation not to appear faceted. 
 
-TEXTURES:
+
+### TEXTURES:
+
 You are not limited to the colour textures supplied with SolidWorks. You can substitute others
 individually in the SW Appearances Property Manager or add a folder in the SW Task Pane for the
 usual drag and drop application. The exporter should find these and copy them to the same
@@ -113,7 +115,9 @@ the file unhindered but you will need to source a substitute image afterward in 
 texture panel. In some later Sw versions some materials do have bump maps (of a sort) supplied,
 as well as the colour map(texture).
 
-SCENE COMPOSITION:
+
+### SCENE COMPOSITION:
+
 You can set up a studio scene in a SW part and use that with your model. For example, it might
 include a floor/backdrop and rectangular surfaces to use as area lights. The part can either be
 inserted into your model part or used as a component in an assembly. You can use mates to position
@@ -125,7 +129,9 @@ make use of other models like those of cars and trucks obtained from many source
 file types. The SW exporter does not handle mesh instances.
 Incidentally the green side of a SW sketch plane is the direction of the normal. 
 
-TESSELLATION:
+
+### TESSELLATION:
+
 The pictures accompanying this README show a mesh in Blender illustrating the standard SW
 tessellation and another where the max face length has been set to 0.15m. This control is handy
 to ensure the triangles are not too long and thin which is bad for use with render engines.
@@ -146,13 +152,13 @@ if necessary use custom ones. The provided default custom numbers are a good sta
 will require some experimentation/familiarisation to get the best results in each case.
 To make sure very small parts are captured faithfully be sure to set the Max Chord Width small
 enough. Try 1/10th of the minimum radius of the smallest feature. You might need to set the Min
-Face Width to be almost as small if the objects are tiny.  
+Face Width to be almost as small if the objects are tiny.
 
--------------------------------------------------------------------------------------------------
 
-KNOWN ISSUES:
+## KNOWN ISSUES:
 
-SOLIDWORKS:
+### SOLIDWORKS:
+
 SolidWorks is pretty poor at texture unwrapping. You will probably want to open the .obj in
 another application like Blender to tweak the unwrap and other aspects of materials.
 In the 'SW unwrap errors' folder included with this macro you can see examples of how poor the
@@ -174,7 +180,9 @@ This can be similarly fixed in Octane by scaling 16x in the textures Y axis.
 --->  All in all I suggest you redo anything other than basic texture mapping in Blender or
 another cg app if you want to end up with quality renders.
 
-BLENDER:
+
+### BLENDER:
+
 While working on this project I discovered that the Blender 2.6 .obj import script has some
 small deficiencies in how it translates materials which will generate unnecessary work for the
 user to fix for each imported material. I hope to have this remedied officially but in the interum
@@ -184,7 +192,4 @@ to preserve it. This modified script may not be compatible with Blender 2.63 bec
 extent of changes made for bmesh.
 
 
--------------------------------------------------------------------------------------------------
-
-HAPPY RENDERING!! :)
-
+**HAPPY RENDERING!! :)**
