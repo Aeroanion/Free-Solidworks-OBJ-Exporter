@@ -3,9 +3,9 @@ NOTE: THIS IS THE SAME TEXT AS APPEARS IN THE MACRO UI 'ABOUT'.
 This macro is an extension of one made available to the public at
 http://sites.google.com/site/karpena/solidworks by karpena@gmail. 
 This software is free for use but is NOT be sold as is, nor in modified form, nor incorporated in
-other software for sale. Version 2.0 is by virtualdesignsnz@gmail and was  released 1/4/2012. It
+other software for sale. Version 2.0 is by virtualdesignsnz@gmail and was released 1/4/2012. It
 should work properly with SW2005 and up. No support is provided and it is distributed without any
-warranty. Be sure to have a backup of your data before using
+warranty. Be sure to have a backup of your data before using.
 
 This macro will export meshes in.obj format from SolidWorks parts and assemblies along with
 materials details in a .mtl file. Display States, sketch pictures and decals are not considered
