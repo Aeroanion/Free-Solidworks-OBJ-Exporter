@@ -29,7 +29,7 @@ useful options. The macro should work as intended with SolidWorks version 2005 a
 
 ## INSTALLATION:
 
-The SW macro can go anywhere but it is convenient to put it where you keep your other SW macros. You can use the provided toolbar button to launch the macro from SW. See the SW Help>Macros>customise buttons to find out how to set this up. See also the included picture of the custom button showing how to select the modSWtoOBJ.InitialUI as the 'Method' to start.
+The SW macro can go anywhere but it is convenient to put it where you keep your other SW macros. You can use the provided toolbar button to launch the macro from SW. See the SW Help>Macros>customise buttons to find out how to set this up. See also the included picture of the custom button showing how to select the modSWtoOBJ.Main as the 'Method' to start.
  
 The macro was originally authored in SW2009. Different SW versions may require you to open the
 macro in the SW MS VBA window, reselect the Reference Libraries appropriate to that version, and
@@ -84,7 +84,7 @@ You can nominate to export 'spec' and 'bump' maps(textures) on the basis of the 
 be in the same location as the color map(texture). For example -
 D:\myplace\mytexture.jpg, D:\myplace\mytexture spec.jpg, D:\myplace\mytexture bump.jpg
 
-If you want to change the ' spec' and ' bump' labels to suit your own texture collection go to
+If you want to change the 'spec' and 'bump' labels to suit your own texture collection go to
 lines 592,593,596,597,605,611 in the vba module code.
 
 If you nominate to use spec and/or bump maps in the UI the texture name will appear in the .mtl
@@ -158,16 +158,6 @@ This can be similarly fixed in Octane by scaling 16x in the textures Y axis.
 --->  All in all I suggest you redo anything other than basic texture mapping in Blender or
 another cg app if you want to end up with quality renders.
 
-
-### BLENDER:
-
-While working on this project I discovered that the Blender 2.6 .obj import script has some
-small deficiencies in how it translates materials which will generate unnecessary work for the
-user to fix for each imported material. I hope to have this remedied officially but in the interum
-I have included a modified IO script to get around these issues. This is a direct substitute for
-the one in the Blender.../Scripts/io_scen_obj folder. Rename the existing one first as __.py.old
-to preserve it. This modified script may not be compatible with Blender 2.63 because of the
-extent of changes made for bmesh.
 
 
 **HAPPY RENDERING!! :)**
